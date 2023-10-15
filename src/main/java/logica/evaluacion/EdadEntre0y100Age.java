@@ -10,6 +10,11 @@ public class EdadEntre0y100Age {
 
         System.out.println("Ingree su edad: ");
         Double edad = scanner.nextDouble();
+
+        if (edad < 0){
+            throw new IllegalArgumentException("La edad no es valida");
+        }
+
         Integer ceros = 0;
 
         do {

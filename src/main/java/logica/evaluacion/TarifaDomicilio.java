@@ -14,6 +14,10 @@ public class TarifaDomicilio {
         System.out.println("Ingrese la cantida de domicilios: ");
         Integer domicilios = scanner.nextInt();
 
+        if (domicilios < 0){
+            throw new IllegalArgumentException("Numero de domicilios no valido");
+        }
+
         if (domicilios > 15){
             System.out.println("El domiciliario " + nombre + " tiene una tarifa" +
                     " del 20%");
