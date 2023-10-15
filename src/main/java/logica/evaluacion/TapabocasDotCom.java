@@ -15,6 +15,10 @@ public class TapabocasDotCom {
             System.out.println("Ingrese cuantos tapabocas va a solicitar: ");
             Integer solicitudTapabocas = scanner.nextInt();
 
+            if (solicitudTapabocas < 0){
+                throw new IllegalArgumentException("Cantidad de tapabocas invalida");
+            }
+
             if (solicitudTapabocas > cantidadDeTababocas){
                 throw new IllegalArgumentException("Cantidad invalida de tapabocas");
             }
